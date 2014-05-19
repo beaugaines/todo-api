@@ -7,6 +7,10 @@ Todo::Application.routes.draw do
     resources :items, only: [:create, :new]
   end
 
+  namespace :api do
+    resources :users
+  end
+
   resources :items, only: [:destroy]
 
   root to: 'users#new'

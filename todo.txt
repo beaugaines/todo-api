@@ -1,0 +1,11 @@
+As a user, I want to be able to authenticate myself from the command line, using a username and password.
+
+As a user, I want to be able to create new users, lists, and items from the command line.
+
+As a user, I want to be able to add and remove lists from the command line.
+
+As a user, I want to be able to change list permissions from the command line, and receive an error when I attempt to set an unsupported permission.
+
+As a user, I want to be able to add and remove (mark complete) items from lists, using the command line.
+
+As a user, I should be able to edit any lists with permissions set to open and view any with permissions set to viewable, from the command line.

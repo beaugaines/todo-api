@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap'
 gem 'bootstrap-sass'
@@ -12,9 +12,14 @@ gem 'haml'
 gem 'haml-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+
+group :development do
+  gem 'quiet_assets'
+  gem 'pry-rails'
+end
 
 group :development, :test do
-  gem 'pry'
   gem 'binding_of_caller'
 end
 
