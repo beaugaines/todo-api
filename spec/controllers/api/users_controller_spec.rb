@@ -18,14 +18,16 @@ describe Api::UsersController do
       JSON.parse(response.body).should == { "user" => { "username" => "testuser", "password" => "testpass"}}
     end
 
-    it "returns an error when not given a username" do
-      post :create, { username: 'testuser' }
-      response.should be_error
+    it "returns an error when not given a password" do
+      post :create, { "new_user" => { "username" => "testuser" } }
+      body = JSON.parse(response.body)
+      expect(body['errors']).to eq ["Password can't be blank"]
     end
 
-    it "returns an error when not given a password" do
-      post :create, { password: 'testpass' }
-      response.should be_error
+    it "returns an error when not given a username" do
+      post :create, { "new_user" => { "password" => "password" } }
+      body = JSON.parse(response.body)
+      expect(body['errors']).to eq ["Username can't be blank"]
     end
   end
 
@@ -41,9 +43,9 @@ describe Api::UsersController do
       JSON.parse(response.body).should == 
         { 'users' => 
           [
-            { 'id' => 1, 'username' => 'name1' },
-            { 'id' => 2, 'username' => 'name2' },
-            { 'id' => 3, 'username' => 'name3' }
+            { 'username' => 'name1', 'password' => 'pass1' },
+            { 'username' => 'name2', 'password' => 'pass2' },
+            { 'username' => 'name3', 'password' => 'pass3' },
           ]
         }
     end
