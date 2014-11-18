@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Api::ListsController do 
+describe API::ListsController do 
 
   before do
     User.destroy_all

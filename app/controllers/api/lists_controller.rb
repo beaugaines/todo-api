@@ -1,5 +1,5 @@
-module Api
-  class ListsController < Api::BaseController
+module API
+  class ListsController < API::BaseController
 
     private
 
@@ -8,7 +8,7 @@ module Api
     end
 
     def query_params
-      params.permit(:list_id, :name)
+      params.permit(:id)
     end
   end
 end

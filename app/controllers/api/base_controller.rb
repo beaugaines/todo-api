@@ -1,4 +1,4 @@
-module Api
+module API
   class BaseController < ApplicationController
     protect_from_forgery with: :null_session
     before_action :set_resource, only: [:destroy, :show, :update]
@@ -44,7 +44,6 @@ module Api
         render json: get_resource.errors, status: :unprocessable_entity
       end
     end
-      
 
     private
 
