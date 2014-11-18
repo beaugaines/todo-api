@@ -93,5 +93,6 @@ module Api
       instance_variable_set("@#{resource_name}", resource)
     end
 
+  end
 end
     
