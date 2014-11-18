@@ -1,13 +1,30 @@
 require 'spec_helper'
 
 describe Api::ListsController do 
+
+  before do
+    User.destroy_all
+  end
+
+  before do
+    @user = User.create!(username: 'Guy Guyly', password: 'password')
+  end
+
   describe "create" do
     context "with correct user's password" do
-      xit "takes a list name, creates it if it doesn't exist, and returns false if it does"
-    end
+      it "takes a name and user_id and creates a list" do
+        params = { "user" => { "password" => "password"}, "new_list" => { "user_id" => "1", "name" => "shopping" }}
+        expect { post :create, params }
+          .to change{ List.where(params["new_list"]).count }
+          .by(1)
+        end
+      end
 
     context "without correct user's password" do
-      xit "it errors"
+      it "it errors ", focus: true do
+        params = { "new_list" => { "user_id" => "1", "name" => "shopping" }}
+        post :create, params
+      end
     end
   end
 

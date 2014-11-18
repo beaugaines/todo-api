@@ -9,6 +9,7 @@ Todo::Application.routes.draw do
 
   namespace :api do
     resources :users
+    resources :lists
   end
 
   resources :items, only: [:destroy]
