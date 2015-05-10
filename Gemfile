@@ -16,6 +16,7 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 group :development do
   gem 'quiet_assets'
   gem 'pry-rails'
+  gem 'httparty'
 end
 
 group :development, :test do

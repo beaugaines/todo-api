@@ -1,6 +1,8 @@
 module API
   class ListsController < API::BaseController
 
+    skip_before_action :verify_authenticity_token
+
     private
 
     def list_params
