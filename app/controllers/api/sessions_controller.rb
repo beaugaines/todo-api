@@ -16,4 +16,10 @@ class API::SessionsController < Devise::SessionsController
     Tiddle.expire_token(current_user, request)
     render json: {}
   end
+
+  private
+  # this is invoked before destroy and we have to override it
+  def verify_signed_out_user
+  end
+  
 end

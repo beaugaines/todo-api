@@ -1,0 +1,4 @@
+curl -H "Accept: application/json" -H "Content-type: application/json"  -X POST -d '{"user":{"email":"feh@foh.com","password":"password"}}' http://localhost:3000/api/users/sign_in
+
+curl -H "Accept: application/json" -H "Content-type: application/json"  -X POST -d '{"user":{"email":"feh@foh.com","password":"password"}}' http://localhost:3000/api/users/sign_in
+

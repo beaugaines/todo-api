@@ -1,8 +1,8 @@
 Todo::Application.routes.draw do
   devise_for :users
-  # resources :users do 
-  #   resources :lists, except: [:index]
-  # end
+  resources :users do 
+    resources :lists, except: [:index]
+  end
 
   resources :lists, only: [] do
     resources :items, only: [:create, :new]
