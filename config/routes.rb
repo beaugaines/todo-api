@@ -9,6 +9,7 @@ Todo::Application.routes.draw do
   end
 
   namespace :api do
+    devise_for :users
     resources :users, :lists
   end
 
