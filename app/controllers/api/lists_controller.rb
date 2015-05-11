@@ -7,7 +7,7 @@ module API
     private
 
     def list_params
-      params.require(:new_list).permit(:name, :user_id, :permissions)
+      params.require(:list).permit(:name, :user_id, :permissions)
     end
 
     def query_params

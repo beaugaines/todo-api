@@ -89,6 +89,7 @@ module API
     # use callbacks to share common setup or constraints between actions
     def set_resource(resource = nil)
       resource ||= resource_class.find(params[:id])
+      resource.user = current_user if current_user
       instance_variable_set("@#{resource_name}", resource)
     end
 

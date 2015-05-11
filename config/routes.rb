@@ -1,5 +1,7 @@
 Todo::Application.routes.draw do
+
   devise_for :users
+  
   resources :users do 
     resources :lists, except: [:index]
   end
