@@ -1,4 +1,4 @@
 curl -H "Accept: application/json" -H "Content-type: application/json"  -X POST -d '{"user":{"email":"feh@foh.com","password":"password"}}' http://localhost:3000/api/users/sign_in
 
-curl -H "Accept: application/json" -H "X-USER-EMAIL: feh@foh.com" -H "X-USER-TOKEN: dxPiv9P4u8WssCKXJ3yd" -H "Content-type: application/json"  -X POST -d '{"list":{"name":"Third list"}}' http://localhost:3000/api/lists
+curl -H "Accept: application/json" -H "X-USER-EMAIL: feh@foh.com" -H "X-USER-TOKEN: "6gjTgTKvFuxas3MB48cz"" -H "Content-type: application/json"  -X POST -d '{"list":{"name":"Fourth list"}}' http://localhost:3000/api/lists
 
